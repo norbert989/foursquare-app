@@ -1,6 +1,6 @@
 (function(angular) {
 	'use strict';
-	angular.module('httpExample', [])
+	angular.module('foursquareApp', [])
 		.controller('FetchController', ['$scope', '$http', '$templateCache',
 			function($scope, $http, $templateCache) {
 				$scope.method = 'GET';
