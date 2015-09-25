@@ -25,7 +25,7 @@
     <div class="col-lg-12">
       <div class="well">
         <div class="input-group">
-          <input type="text" class="form-control" ng-model="place" placeholder="Search for...">
+          <input type="text" class="form-control" ng-model="place"  placeholder="Search for...">
             <span class="input-group-btn">
               <button class="btn btn-secondary" id="fetchbtn" ng-click="fetch()" type="button">Go!</button>
             </span>
@@ -35,16 +35,26 @@
   </div>
 
   <div class="list-group">
-    <div class="list-group-item" ng-repeat="item in items">
-      <h4 class="list-group-item-heading">{{ item.venue.name }}</h4>
-
-      <p class="list-group-item-text">{{ item.venue.rating }}</p>
+    <div class="list-group-item" ng-repeat="item in items" ng-class-even="'bg-primary'">
+      <div class="row">
+        <div class="col-xs-6 col-sm-4"><h4 class="list-group-item-heading">{{ item.venue.name }}</h4></div>
+        <div class="col-xs-6 col-sm-4"> <p class="list-group-item-text">{{ item.venue.categories[0].name }}</p></div>
+        <div class="col-xs-6 col-sm-4">
+          <div class="row">
+            <div class="col-xs-6"></div>
+            <div class="col-xs-6 text-right">{{ item.venue.rating }} <span class="glyphicon glyphicon-star-empty"></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">{{ item.tips[0].text }}</div>
+      </div>
     </div>
   </div>
 
-  <script src="assets/angular/angular.min.js"></script>
-  <script src="assets/angular-animate/angular-animate.min.js"></script>
-  <script src="assets/jquery/dist/jquery.min.js"></script>
-  <script src="js/scripts.min.js"></script>
+    <script src="assets/angular/angular.min.js"></script>
+    <script src="assets/angular-animate/angular-animate.min.js"></script>
+    <script src="assets/jquery/dist/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
 </body>
 </html>
