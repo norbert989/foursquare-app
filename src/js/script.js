@@ -1,6 +1,6 @@
 (function(angular) {
 	'use strict';
-	angular.module('foursquareApp', [])
+	angular.module('foursquareApp', ['ngAnimate'])
 		.controller('FetchController', ['$scope', '$http', '$templateCache',
 			function($scope, $http, $templateCache) {
 				$scope.method = 'GET';

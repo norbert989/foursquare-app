@@ -21,3 +21,19 @@ body {
     background-color: #337ab7;
   }
 }
+
+.animation {
+  -webkit-transition: 1s;
+}
+.animation.ng-enter {
+  opacity: 0;
+}
+.animation.ng-leave {
+  opacity: 1;
+}
+.animation.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+.animation.ng-leave.ng-leave-active {
+  opacity: 0;
+}
