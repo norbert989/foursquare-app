@@ -5,7 +5,7 @@
   <title>Norbert Nagy - foursquare Explore Venues</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body ng-app="foursquareApp">
 <div class="jumbotron text-center">
@@ -35,7 +35,7 @@
   </div>
 
   <div class="list-group">
-    <div class="list-group-item animation" ng-repeat="item in items" ng-class-even="'bg-primary'">
+    <div class="list-group-item animation" ng-show="items" ng-repeat="item in items" ng-class-even="'bg-primary'">
       <div class="row">
         <div class="col-xs-6 col-sm-4"><h4 class="list-group-item-heading">{{ item.venue.name }}</h4></div>
         <div class="col-xs-6 col-sm-4 text-center"> <p class="list-group-item-text"><span class="glyphicon glyphicon-info-sign"></span> {{ item.venue.categories[0].name }}</p></div>
@@ -47,6 +47,11 @@
       <div class="row">
         <div class="col-xs-6"><span class="glyphicon glyphicon-record"></span> {{ item.venue.location.address }}, {{ item.venue.location.city }}</div>
         <div class="col-xs-6" ng-show="item.venue.hours.status"><span class="glyphicon glyphicon-time"></span> {{ item.venue.hours.status }}</div>
+      </div>
+    </div>
+    <div class="list-group-item animation" ng-show="nomatch">
+      <div class="row">
+        <div class="col-md-12">No match</div>
       </div>
     </div>
   </div>
