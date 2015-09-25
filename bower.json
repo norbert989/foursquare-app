@@ -1,0 +1,22 @@
+{
+  "name": "grunt-bower-setup",
+  "version": "0.0.0",
+  "authors": [
+    "Norbert Nagy <norbertnadj@gmail.com>"
+  ],
+  "license": "MIT",
+  "description": "Basic setup with grunt and bower",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#~1.4.6",
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "angular-animate": "~1.4.6"
+  }
+}
