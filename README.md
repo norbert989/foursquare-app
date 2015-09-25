@@ -1,4 +1,4 @@
-#Basic setup with Grunt and Bower
+#Foursquare API - Explore integration
 
 #### Features:
 
@@ -22,9 +22,7 @@
 
 ### Install:
 
-	* Run 'grunt' in terminal to generate dist folder and load bower dependencies
-	* Run 'grunt watch'
-	* start developing
+	* Run 'grunt' in terminal to generate dist folder and load bower dependencies and required assets
 
 ### Foursquare search integration
 
