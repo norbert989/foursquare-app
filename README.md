@@ -1,4 +1,4 @@
-#Search form with integrated Foursquare API request
+#Foursquare API - Explore integration
 
 #### Features:
 
